@@ -1,0 +1,27 @@
+extends ../layout.pug
+
+block content
+    form(method="POST", action="/empleados/update")
+        .form-group
+            label Nombre
+            input.form-control(type="text", name="nombre", value=empleado.nombre)
+        .form-group
+            label DNI
+            input.form-control(type="text", name="dni", value=empleado.dni)
+        .form-group
+            label Sexo
+            input.form-control(type="text", name="sexo", value=empleado.sexo)
+        .form-group
+            label Fecha nacimiento
+            input.form-control(type="text", name="fecha_nac", value=empleado.fecha_nac)
+        .form-group
+            label Fecha incorporación
+            input.form-control(type="text", name="fecha_inc", value=empleado.fecha_inc) 
+        .form-group
+            label Salario
+            input.form-control(type="text", name="salario", value=empleado.salario)
+        .form-group
+            label Cargo
+            input.form-control(type="text", name="cargo", value=empleado.cargo)   
+        input(type="hidden", name="id", value=empleado.id)
+        input(type="submit", value="Enviar")       

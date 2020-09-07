@@ -1,0 +1,40 @@
+GET http://localhost:3000/api/empleados 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImNyZWF0ZWRBdCI6MTU5OTQ5ODU4MiwiZXhwaXJlZEF0IjoxNTk5NDk5NDgyLCJpYXQiOjE1OTk0OTg1ODJ9.0t4_6f3XFMXf865RRLnybclotgo1cHg_Bnz6B6YmtSw
+
+###
+
+POST http://localhost:3000/api/empleados 
+Content-Type: application/json
+
+###
+
+DELETE http://localhost:3000/api/empleados 
+Content-Type: application/json
+
+###
+
+PUT http://localhost:3000/api/empleados 
+Content-Type: application/json
+
+### departamentos ####
+GET http://localhost:3000/api/departamentos
+
+
+### USUARIOS
+
+POST http://localhost:3000/api/usuarios/registro 
+Content-Type: application/json
+
+{
+    "username": "cherrera", "email": "cristian_hm@hotmail.com", "password": "12345"
+
+}
+
+### 
+POST http://localhost:3000/api/usuarios/login 
+Content-Type: application/json
+
+{
+    "email": "cristian_hm@hotmail.com", "password": "12345"
+
+}

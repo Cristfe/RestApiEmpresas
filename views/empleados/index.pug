@@ -1,0 +1,33 @@
+extends ../layout.pug
+
+block content
+    div.mt-5
+        a.btn.btn-success(href="/empleados/new") Crear nuevo empleado
+    table.table.table-hover.mt-5
+        thead.thead-dark
+            tr
+                th Nombre
+                th Dni
+                th Sexo
+                th Fecha nacimiento
+                th Fecha incorporacion
+                th Salario
+                th Cargo
+                th Departamento
+                th Jefe
+        tbody
+            each empleado in empleados
+                tr
+                    td= empleado.nombre
+                    td= empleado.dni
+                    td= empleado.sexo
+                    td= empleado.fecha_nac
+                    td= empleado.fecha_inc
+                    td= empleado.salario
+                    td= empleado.cargo
+                    td= empleado.fk_departamento
+                    td= empleado.jefe_id
+                    td
+                        a.btn.btn-sm.btn-info(href="/empleados/"+empleado.id) Detalle
+                        a.btn.btn-sm.btn-primary.ml-1(href="/empleados/edit/"+empleado.id) Editar
+                        a.btn.btn-sm.btn-danger.ml-1(href="/empleados/delete/"+empleado.id, onclick="return confirm('¿estás seguro de borrar el empleado?')") Borrar

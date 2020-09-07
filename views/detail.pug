@@ -1,0 +1,15 @@
+extends ../layout.pug
+
+block content
+   h2 #{empleado.nombre} 
+    p DNI: #{empleado.dni}
+    p Sexo: #{empleado.sexo}
+    p Fecha Nacimiento #{empleado.fecha_nac}
+    p Fecha Inicio #{empleado.fecha_inic}
+    p Email: #{empleado.email}
+    p Salario: #{empleado.salario}
+    p Cargo: #{empleado.cargo}
+    p Departamento: #{empleado.fk_departamento}
+    p Jefe: #{empleado.jefe}
+    div
+        a(href="/empleados") Volver
